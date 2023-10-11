@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-//const shapes;
+const shapes = require('./lib/shapes/shapes');
 const { writeFile } = fs.promises;
 
 // TODO: Create an array of questions for user input
@@ -20,7 +20,7 @@ const questions = [
       type: 'input',
       name: 'shape',
       message: 'Please select the shape for the logo',
-      choices: shapes,
+      choices: shapes.shapeTypes,
     },
     {
       type: 'input',
@@ -29,12 +29,12 @@ const questions = [
     },
   ];
 
-// TODO: Create a function to write README file
+// Write README file
 function writeToFile(fileName, data) {
   writeFile(fileName, generateMarkdown.generateMarkdown(data));
 }
 
-// TODO: Create a function to initialize app
+// Initialize app
 function init() {
     inquirer.prompt(questions)
     .then((answers) => writeToFile('./examples/logo.svg', answers))
@@ -42,5 +42,5 @@ function init() {
     .catch((err) => console.error(err));
 }
 
-// Function call to initialize app
+// Initialize app
 init();

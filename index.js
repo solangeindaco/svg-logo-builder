@@ -1,10 +1,11 @@
-// TODO: Include packages needed for this application
+// Includes packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const svgLogo = require('./lib/svgLogo');
+const shapes = require('./lib/shapes');
 const { writeFile } = fs.promises;
 
-// TODO: Create an array of questions for user input
+// Creates an array of questions for user input
 const questions = [
     {
       type: 'input',
@@ -17,7 +18,7 @@ const questions = [
       message: 'Please enter the color of the text',
     },
     {
-      type: 'input',
+      type: 'list',
       name: 'shape',
       message: 'Please select the shape for the logo',
       choices: shapes.shapeTypes,
@@ -29,9 +30,10 @@ const questions = [
     },
   ];
 
-// Write SVG logo file
+// Writes SVG logo file
 function writeToFile(fileName, data) {
-  writeFile(fileName, svgLogo.generateLogo(data));
+  const {text, textColor, shape, shapeColor} = data;
+  writeFile(fileName, svgLogo.generateLogo(text, textColor, shape, shapeColor));
 }
 
 // Initialize app

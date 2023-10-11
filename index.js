@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const shapes = require('./lib/shapes/shapes');
+const svgLogo = require('./lib/svgLogo');
 const { writeFile } = fs.promises;
 
 // TODO: Create an array of questions for user input
@@ -29,9 +29,9 @@ const questions = [
     },
   ];
 
-// Write README file
+// Write SVG logo file
 function writeToFile(fileName, data) {
-  writeFile(fileName, generateMarkdown.generateMarkdown(data));
+  writeFile(fileName, svgLogo.generateLogo(data));
 }
 
 // Initialize app

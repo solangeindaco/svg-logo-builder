@@ -5,12 +5,22 @@ const svgLogo = require('./lib/svgLogo');
 const shapes = require('./lib/shapes');
 const { writeFile } = fs.promises;
 
+
+
 // Creates an array of questions for user input
 const questions = [
     {
       type: 'input',
       name: 'text',
       message: 'Please enter up to three characters for the Logo',
+      validate: function (input) {
+        if (input.length <= 3) {
+          console.log;
+          return true;
+        }else{
+          return 'You need to provide up to 3 characters';
+        }
+      },
     },
     {
       type: 'input',

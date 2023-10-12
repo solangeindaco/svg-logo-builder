@@ -4,13 +4,9 @@
 
 ## Description
 
-I create this application to learn about Node.js. I create a command-line application that dynamically generates a professional README.md file from a user's input.
-I learn:  
-    - how to use .  
-    - how to use .   
-    - How to use .    
-    - How to .     
-    - How to use .        
+I create this application to review Object Oriented Programing concepts in Javascript and to learn how to use JEST. I create a Node.js command-line application that takes in user input to generate a logo and save it as an SVG file. The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a .svg file. I learn:  
+    - how to create tests using JEST.  
+    - how to create classes and use Inheritance in Javascript.          
 
 ## Installation
 
@@ -26,11 +22,8 @@ The following video shows the web application's appearance and functionality:
 ## Credits
 
 To create this application, I used the following tutorials:  
-    - Node.js: https://nodejs.org/docs/latest/api/documentation.html    
-    - Inquirer package: https://www.npmjs.com/package/inquirer                    
-    - fs : https://node.readthedocs.io/en/latest/api/fs/            
-    - Shields: https://shields.io/       
-    - Npm: https://docs.npmjs.com/about-npm               
+    - JEST: https://jestjs.io/docs/getting-started        
+    - Inheritance package: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain                                     
 
 ## License
 

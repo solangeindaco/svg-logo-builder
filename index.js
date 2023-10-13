@@ -25,7 +25,7 @@ const questions = [
       type: 'input',
       name: 'textColor',
       message: 'Please enter the color of the text',
-      validate: (input) => color.isValidColorInput(input),
+      validate: input => color.isValidColorInput(input),
       default: "",
     },
     {

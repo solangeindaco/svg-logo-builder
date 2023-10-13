@@ -4,8 +4,7 @@ const fs = require('fs');
 const svgLogo = require('./lib/svgLogo');
 const shapes = require('./lib/shapes');
 const { writeFile } = fs.promises;
-
-
+const color = require('./lib/colors');
 
 // Creates an array of questions for user input
 const questions = [
@@ -26,6 +25,8 @@ const questions = [
       type: 'input',
       name: 'textColor',
       message: 'Please enter the color of the text',
+      validate: (input) => color.isValidColorInput(input),
+      default: "",
     },
     {
       type: 'list',
@@ -37,6 +38,8 @@ const questions = [
       type: 'input',
       name: 'shapeColor',
       message: 'Please enter the color of the shape',
+      default: "",
+      validate: (input) => color.isValidColorInput(input),
     },
   ];
 

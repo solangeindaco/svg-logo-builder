@@ -19,7 +19,7 @@ Repository URL: https://github.com/solangeindaco/svg-logo-builder
 
 The following video shows the command line application's appearance and functionality:
 
-[SVG Logo Builder video](https://drive.google.com/file/d/13IPKIS2DmsPa-5D8jb8ZeZghehBDnyQg/view)
+[SVG Logo Builder video](https://drive.google.com/file/d/1KxUMGlnRR4EkjfI2KPGyeP_HHYTRwrRm/view)
 
 
 ## Credits
